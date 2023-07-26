@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+body {
+    margin: 0px;
+    font-family: 'Roboto';
+    background-color: rgb(242, 238, 10);
+}
+
+#topic {
+    color: #ff9d00;
+    text-shadow: black 40%;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    width: 100%;
+    bottom: 45%;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#flip {
+    height: 50px;
+    overflow: hidden;
+}
+
+#flip>div>div {
+    color: #fff;
+    padding: 4px 12px;
+    height: 45px;
+    margin-bottom: 45px;
+    display: inline-block;
+}
+
+#flip div:first-child {
+    animation: show 5s linear infinite;
+}
+
+#flip div div {
+    background: #ff9d00;
+}
+
+#flip div:first-child div {
+    background: #ff1f01;
+}
+
+
+/* 
+#flip div:nth-child(2) div {
+    background: #ff9d00;
+} */
+
+#flip div:last-child div {
+    background: #897128;
+}
+
+@keyframes show {
+    0% {
+        margin-top: -270px;
+    }
+    5% {
+        margin-top: -180px;
+    }
+    33% {
+        margin-top: -180px;
+    }
+    38% {
+        margin-top: -90px;
+    }
+    66% {
+        margin-top: -90px;
+    }
+    71% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+.result {
+    width: 100%;
+    bottom: 30px;
+    font-size: 20px;
+    color: #999;
+    text-align: center;
+    line-height: 12px;
+}
+
+h1 {
+    margin-bottom: 40px;
+    color: red;
+}
+
+.game {
+    width: 100%;
+    height: 640px;
+    position: relative;
+}
+
+.content {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.button {
+    --b: 3px;
+    --s: .45em;
+    --color: #6f3b00;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b), #e88e0800 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #e8860600;
+    outline-offset: .6em;
+    font-size: 40px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-weight: bold;
+}
+
+.button:hover,
+.button:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+    background-color: #ff9d00;
+}
+
+.button:active {
+    background: var(--color);
+    color: #fff;
+}
